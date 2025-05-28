@@ -12,7 +12,7 @@ const app = new Hono<{Bindings: Bindings}>();
 app.use(
 	'/*',
 	cors({
-		origin: '*', // Allow requests from your Next.js app
+		origin: ['https://notion-clone-lapintam-matthew-lapintas-projects.vercel.app', 'http://localhost:3000'], // Only allow your frontend
 		allowHeaders: ['X-Custom-Header', 'Upgrade-Insecure-Requests', 'Content-Type'], // Add Content-Type to the allowed headers to fix CORS
 		allowMethods: ['GET', 'POST', 'PUT','OPTIONS'],
 		exposeHeaders: ['Content-Range', 'X-Kuma-Revision'],
